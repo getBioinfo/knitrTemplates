@@ -1,0 +1,83 @@
+\documentclass{book}
+\usepackage[USenglish,french]{babel}
+\usepackage{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage{breakurl}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=true]{hyperref}
+\hypersetup{pdfstartview={XYZ null null 1}}
+
+% pgf-tikz
+\usepackage{tkz-graph}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{pgfplots}
+\usepackage{pdfpages} % for including PDF 
+
+\usepackage{xcolor,colortbl}% http://ctan.org/pkg/colortbl
+\usepackage{subfig} % sub figures or tables together
+\usepackage{multirow}
+\usepackage{exercise} % exercise-answer
+\usepackage{color,soul} % use for highlight
+\usepackage{wasysym}
+\usepackage{float}
+
+\usepackage{epigraph} % quotation at the chapter beginning
+\usepackage{lipsum} % for text filling
+
+\restylefloat{table}
+
+
+% START: highlight with color
+\newcommand{\hlc}[2][yellow]{ {\sethlcolor{#1} \hl{#2}} }
+% END: highlight with color
+
+\newcommand{\source}[1]{%
+  \nobreak\parbox[t]{\linewidth}{\raggedleft #1}% Placing a quote source
+}%
+
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+# this is equivalent to \SweaveOpts{...}
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(replace.assign=TRUE,width=90)
+@
+
+
+\title{Book template}
+\author{Hong Xu}
+
+\maketitle
+
+\chapter{Introduction}
+\epigraph{Advice is what we ask for when we already know the answer but wish we didn’t.}{\href{http://en.wikipedia.org/wiki/Erica_Jong}{Erica Jong}}
+
+\lipsum[1]
+
+\section{Notes}
+\lipsum[2]
+
+\section{Exercises}
+\lipsum[3]
+
+\chapter{The Models We Believe In}
+\epigraph{Chaque vérité que je trouvois étant une règle qui me servoit après à en trouver d’autres [Each truth that I discovered became a rule which then served to discover other truths]}{\href{http://en.wikipedia.org/wiki/Rene_Descartes}{Rene Descartes, ``Discours de la Méthode''}}
+
+\lipsum[4]
+
+\section{Notes}
+\lipsum[5]
+
+\section{Exercises}
+\lipsum[6]
+
+\end{document}
